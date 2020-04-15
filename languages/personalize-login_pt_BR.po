@@ -1,0 +1,224 @@
+# Copyright (C) 2020 Ricardo Santana
+# This file is distributed under the same license as the Personalize Login plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Personalize Login 2.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/personalize-"
+"login\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-04-14T19:47:31+00:00\n"
+"PO-Revision-Date: 2020-04-14 17:46-0300\n"
+"X-Generator: Poedit 2.3\n"
+"X-Domain: personalize-login\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: pt_BR\n"
+
+#. Plugin Name of the plugin
+msgid "Personalize Login"
+msgstr "Personalizar Login"
+
+#. Description of the plugin
+msgid ""
+"Plugin que altera o fluxo de login, registro e esqueceu senha no wordpress."
+msgstr ""
+"Plugin que altera o fluxo de login, registro e esqueceu senha no wordpress."
+
+#. Author of the plugin
+msgid "Ricardo Santana"
+msgstr ""
+
+#: personalize-login.php:61 templates/login_form.php:4
+#: templates/login_form.php:50 templates/login_form.php:73
+msgid "Sign In"
+msgstr "Entrar"
+
+#: personalize-login.php:65
+msgid "Your Account"
+msgstr "Sua Conta"
+
+#: personalize-login.php:69 templates/register_form.php:3
+#: templates/register_form.php:53
+msgid "Register"
+msgstr "Registrar"
+
+#: personalize-login.php:73 templates/password_lost_form.php:3
+msgid "Forgot Your Password?"
+msgstr "Esqueceu sua senha?"
+
+#: personalize-login.php:77 templates/password_reset_form.php:3
+msgid "Pick a New Password"
+msgstr "Adquira uma nova Senha"
+
+#: personalize-login.php:274 personalize-login.php:326
+#: personalize-login.php:361 personalize-login.php:391
+msgid "You are already signed in."
+msgstr "Você já está logado."
+
+#: personalize-login.php:328 personalize-login.php:743
+msgid "Registering new users is currently not allowed."
+msgstr "O registro de novos usuários está temporariamente desativado."
+
+#: personalize-login.php:410
+msgid "Invalid password reset link."
+msgstr "Link de redefinição de senha inválido."
+
+#: personalize-login.php:593
+msgid "Hello!"
+msgstr "Olá!"
+
+#: personalize-login.php:594
+msgid ""
+"You asked us to reset your password for your account using the email address "
+"%s."
+msgstr ""
+"Você nos pediu para redefinir sua senha da sua conta usando o endereço de e-"
+"mail %s."
+
+#: personalize-login.php:595
+msgid ""
+"If this was a mistake, or you didn't ask for a password reset, just ignore "
+"this email and nothing will happen."
+msgstr ""
+"Se isso foi um erro ou você não pediu uma redefinição de senha, ignore este "
+"e-mail e nada acontecerá."
+
+#: personalize-login.php:596
+msgid "To reset your password, visit the following address:"
+msgstr "Para redefinir sua senha, visite o seguinte endereço:"
+
+#: personalize-login.php:598
+msgid "Thanks!"
+msgstr "Obrigado!"
+
+#: personalize-login.php:716
+msgid "You do have an email address, right?"
+msgstr "Inserira seu e-mail!"
+
+#: personalize-login.php:719
+msgid "You need to enter a password to login."
+msgstr "Você precisa digitar uma senha para fazer login."
+
+#: personalize-login.php:722
+msgid ""
+"We don't have any users with that email address. Maybe you used a different "
+"one when signing up?"
+msgstr ""
+"Não temos usuários com esse endereço de email. Talvez você tenha usado um "
+"diferente ao se inscrever?"
+
+#: personalize-login.php:728
+msgid ""
+"The password you entered wasn't quite right. <a href='%s'>Did you forget "
+"your password</a>?"
+msgstr ""
+"A senha digitada não estava correta. <a href='%s'> Você esqueceu sua senha </"
+"a>?"
+
+#: personalize-login.php:737
+msgid "The email address you entered is not valid."
+msgstr "O endereço de email digitado não é válido."
+
+#: personalize-login.php:740
+msgid "An account exists with this email address."
+msgstr "Existe uma conta com este endereço de email."
+
+#: personalize-login.php:746
+msgid "The Google reCAPTCHA check failed. Are you a robot?"
+msgstr "A verificação do Google reCAPTCHA falhou. Você é um robô?"
+
+#: personalize-login.php:751
+msgid "You need to enter your email address to continue."
+msgstr "Você precisa digitar seu endereço de e-mail para continuar."
+
+#: personalize-login.php:755
+msgid "There are no users registered with this email address."
+msgstr "Não há usuários registrados com este endereço de email."
+
+#: personalize-login.php:761
+msgid "The password reset link you used is not valid anymore."
+msgstr "O link de redefinição de senha que você usou não é mais válido."
+
+#: personalize-login.php:764
+msgid "The two passwords you entered don't match."
+msgstr "As duas senhas que você digitou não correspondem."
+
+#: personalize-login.php:767
+msgid "Sorry, we don't accept empty passwords."
+msgstr "Desculpe, não aceitamos senhas vazias."
+
+#: personalize-login.php:773
+msgid "An unknown error occurred. Please try again later."
+msgstr "Ocorreu um erro desconhecido. Por favor, tente novamente mais tarde."
+
+#: personalize-login.php:791
+msgid "reCAPTCHA site key"
+msgstr ""
+
+#: personalize-login.php:798
+msgid "reCAPTCHA secret key"
+msgstr ""
+
+#: templates/login_form.php:19
+msgid "You have signed out. Would you like to sign in again?"
+msgstr "Você desconectou. Deseja fazer login novamente?"
+
+#: templates/login_form.php:27
+msgid ""
+"You have successfully registered to <strong>%s</strong>. We have emailed "
+"your password to the email address you entered."
+msgstr ""
+"Você se registrou com sucesso em <strong>% s </strong>. Enviamos sua senha "
+"por e-mail para o endereço de e-mail digitado."
+
+#: templates/login_form.php:36
+msgid "Check your email for a link to reset your password."
+msgstr "Verifique seu e-mail para um link para redefinir sua senha."
+
+#: templates/login_form.php:42
+msgid "Your password has been changed. You can sign in now."
+msgstr "Sua senha foi mudada. Você pode entrar agora."
+
+#: templates/login_form.php:49 templates/login_form.php:65
+#: templates/password_lost_form.php:25 templates/register_form.php:16
+msgid "Email"
+msgstr "Email"
+
+#: templates/login_form.php:57
+msgid "Forgot your password?"
+msgstr "Esqueceu sua senha?"
+
+#: templates/login_form.php:69
+msgid "Password"
+msgstr "Senha"
+
+#: templates/password_lost_form.php:31 templates/password_reset_form.php:31
+msgid "Reset Password"
+msgstr "Redefinir senha"
+
+#: templates/password_reset_form.php:19
+msgid "New password"
+msgstr "Nova senha"
+
+#: templates/password_reset_form.php:23
+msgid "Repeat new password"
+msgstr "Repetir nova senha"
+
+#: templates/register_form.php:21
+msgid "First name"
+msgstr "Nome"
+
+#: templates/register_form.php:26
+msgid "Last name"
+msgstr "Sobrenome"
+
+#: templates/register_form.php:40
+msgid ""
+"Note: Your password will be generated automatically and emailed to the "
+"address you specify above."
+msgstr ""
+"Nota: Sua senha será gerada automaticamente e enviada por e-mail para o "
+"endereço especificado acima."
