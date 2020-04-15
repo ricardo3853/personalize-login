@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2020-04-14T19:47:31+00:00\n"
-"PO-Revision-Date: 2020-04-14 17:46-0300\n"
+"PO-Revision-Date: 2020-04-14 18:12-0300\n"
 "X-Generator: Poedit 2.3\n"
 "X-Domain: personalize-login\n"
 "Last-Translator: \n"
@@ -96,7 +96,7 @@ msgstr "Obrigado!"
 
 #: personalize-login.php:716
 msgid "You do have an email address, right?"
-msgstr "Inserira seu e-mail!"
+msgstr "Insira seu e-mail!"
 
 #: personalize-login.php:719
 msgid "You need to enter a password to login."
