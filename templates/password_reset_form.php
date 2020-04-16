@@ -9,7 +9,7 @@
 
 		<?php if ( count( $attributes['errors'] ) > 0 ) : ?>
 			<?php foreach ( $attributes['errors'] as $error ) : ?>
-				<p>
+				<p class="login-error">
 					<?php echo $error; ?>
 				</p>
 			<?php endforeach; ?>

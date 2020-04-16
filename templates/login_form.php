@@ -42,8 +42,7 @@
 			<?php _e( 'Your password has been changed. You can sign in now.', 'personalize-login' ); ?>
 		</p>
 	<?php endif; ?>
-	<fieldset>
-		<legend>Acesso</legend>	
+	 
 			<?php
 				wp_login_form(
 					array(
@@ -59,14 +58,14 @@
 			<a class="forgot-password" href="<?php echo wp_registration_url(); ?>">
 				Não possui acesso ?
 			</a>
-	</fieldset>
+	 
 
 </div>
 <?php else : ?>
 	<div class="login-form-container">
 		<form method="post" action="<?php echo wp_login_url(); ?>">
-		<fieldset>
-		 	<legend>Acesso</legend>	
+		 
+		 
 			<p class="login-username">
 				<label for="user_login"><?php _e( 'Email', 'personalize-login' ); ?></label>
 				<input type="text" name="log" id="user_login">
@@ -78,7 +77,7 @@
 			<p class="login-submit">
 				<input type="submit" value="<?php _e( 'Sign In', 'personalize-login' ); ?>">
 			</p>
-		</fieldset>
+		 
 		</form>
 	</div>
 <?php endif; ?>

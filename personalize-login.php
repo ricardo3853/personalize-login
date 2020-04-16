@@ -59,7 +59,7 @@ class Personalize_Login_Plugin {
 		$page_definitions = array(
 			'member-login' => array(
 				'title' => __( 'Sign In', 'personalize-login' ),
-				'content' => '[custom-login-form]'
+				'content' => "[login_registro tela='login']"
 			),
 			'member-account' => array(
 				'title' => __( 'Your Account', 'personalize-login' ),
@@ -67,24 +67,24 @@ class Personalize_Login_Plugin {
 			),
 			'member-register' => array(
 				'title' => __( 'Register', 'personalize-login' ),
-				'content' => '[custom-register-form]'
+				'content' => "[login_registro tela='registro']"
 			),
 			'member-password-lost' => array(
 				'title' => __( 'Forgot Your Password?', 'personalize-login' ),
-				'content' => '[custom-password-lost-form]'
+				'content' => "[login_registro tela='lostPassword']"
 			),
 			'member-password-reset' => array(
 				'title' => __( 'Pick a New Password', 'personalize-login' ),
-				'content' => '[custom-password-reset-form]'
+				'content' => "[login_registro tela='resetPassword']"
 			)
 		);
 
 		foreach ( $page_definitions as $slug => $page ) {
 			// Check that the page doesn't exist already
 			$query = new WP_Query( 'pagename=' . $slug );
-			if ( ! $query->have_posts() ) {
+			if ( ! $query->have_posts() ) :
 				// Add the page using the data from the array above
-				wp_insert_post(
+			 $post_id = wp_insert_post(
 					array(
 						'post_content'   => $page['content'],
 						'post_name'      => $slug,
@@ -95,7 +95,8 @@ class Personalize_Login_Plugin {
 						'comment_status' => 'closed',
 					)
 				);
-			}
+			 
+			endif;
 		}
 	}
 
@@ -639,7 +640,8 @@ class Personalize_Login_Plugin {
 			'first_name'    => $first_name,
 			'last_name'     => $last_name,
 			'nickname'      => $first_name,
-			'role'			=> $role
+			'role'			=> $role,
+			'show_admin_bar_front'=>"false"
 		);
 
 		$user_id = wp_insert_user( $user_data );

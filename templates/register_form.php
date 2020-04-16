@@ -12,19 +12,18 @@
 	<?php endif; ?>
 
 	<form id="signupform" action="<?php echo wp_registration_url(); ?>" method="post">
-		<fieldset>
-		 	<legend>Registre-se</legend>					
-			 
-					<div class="row">
-						<div class="col-md-5">
-							<input type="radio" name="tipo_role" id='role-jovem-aprendiz' value="jovem_aprendiz" checked>
-							<label for='role-jovem-aprendiz'>SOU UM JOVEM APRENDIZ</label>
-						</div>
-						<div class="col-md-5">
-							<input type="radio" name="tipo_role" id='role-empresas' value="empresas">
-							<label for='role-empresas'>SOU UMA EMPRESA</label>
-						</div>
-					</div>
+	 
+		
+			<div class="row linha-tipo-register">
+				<div class="col-md-6">
+					<input type="radio" name="tipo_role" id='role-jovem-aprendiz' value="jovem_aprendiz" checked>
+					<label for='role-jovem-aprendiz'>SOU UM JOVEM APRENDIZ</label>
+				</div>
+				<div class="col-md-6">
+					<input type="radio" name="tipo_role" id='role-empresas' value="empresas">
+					<label for='role-empresas'>SOU UMA EMPRESA</label>
+				</div>
+			</div>
 				<p></p>
 			<p class="form-row">
 				<label for="email"><?php _e( 'Email', 'personalize-login' ); ?> <strong>*</strong></label>
@@ -54,7 +53,15 @@
 			<input type="submit" name="submit" class="register-button"
 			       value="<?php _e( 'Register', 'personalize-login' ); ?>"/>
 		</p>
-	</fieldset>
+ 
 
 	</form>
 </div>
+<script>
+	jQuery(".linha-tipo-register input:radio").live("click",function(){
+		if(jQuery(this).prop("checked")){		
+			jQuery(".linha-tipo-register  .col-md-6").removeClass("linha-tipo-register-selected ");
+			jQuery(this).closest("div").addClass("linha-tipo-register-selected ");
+		}	
+	});
+</script>
