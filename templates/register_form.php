@@ -58,7 +58,7 @@
 	</form>
 </div>
 <script>
-	jQuery(".linha-tipo-register input:radio").live("click",function(){
+	jQuery(".linha-tipo-register input:radio").on("click",function(){
 		if(jQuery(this).prop("checked")){		
 			jQuery(".linha-tipo-register  .col-md-6").removeClass("linha-tipo-register-selected ");
 			jQuery(this).closest("div").addClass("linha-tipo-register-selected ");

@@ -63,7 +63,7 @@ class Personalize_Login_Plugin {
 			),
 			'member-account' => array(
 				'title' => __( 'Your Account', 'personalize-login' ),
-				'content' => '[account-info]'
+				'content' => '[account_info]'
 			),
 			'member-register' => array(
 				'title' => __( 'Register', 'personalize-login' ),
@@ -98,12 +98,76 @@ class Personalize_Login_Plugin {
 			 
 			endif;
 		}
+		/* inserir Metas para páginas de login */
+
+		$postTitle=array('member-register','member-password-lost','member-password-reset','member-login');
+
+		foreach ($postTitle as $value):
+			$post = get_page_by_path($value, OBJECT, 'page');
+			$post_id = $post->ID;
+			if ( $value=='member-login' )
+			{
+				update_option( 'page_on_front', $post_id );
+				update_option( 'show_on_front', 'page' );
+			}
+
+			if($post_id):
+				$metas = array(
+					'_cover' => '',
+					'_hide_breadcrumb' => '1',
+					'_hide_footer'=>'1',
+					'_hide_header'=>'1',
+					'_hide_page_title' =>'1',
+					'_edit_last'=> '1',
+					'_edit_lock' =>'1586985726:1',
+					'_show_excerpt' =>'',
+					'_wc_apply_product' =>'',
+					'_wp_page_template' =>'template-fullwidth.php'
+				);        
+				foreach ($metas as $key => $value):
+					add_post_meta($post_id,$key,$value,true);			
+				endforeach;
+			endif;
+		endforeach;
 	}
 
 	//
 	// REDIRECT FUNCTIONS
 	//
+	public function insertPageMeta(){
 
+	  $postTitle=array('member-register','member-password-lost','member-password-reset','member-login');
+
+        foreach ($postTitle as $value):
+            $post = get_page_by_path($value, OBJECT, 'page');
+            $post_id = $post->ID;
+             if ( $value=='member-login' )
+                {
+                    update_option( 'page_on_front', $post_id );
+                    update_option( 'show_on_front', 'page' );
+                }
+
+            if($post_id):
+                $metas = array(
+                    '_cover' => '',
+                    '_hide_breadcrumb' => '1',
+                    '_hide_footer'=>'1',
+                    '_hide_header'=>'1',
+                    '_hide_page_title' =>'1',
+                    '_edit_last'=> '1',
+                    '_edit_lock' =>'1586985726:1',
+                    '_show_excerpt' =>'',
+                    '_wc_apply_product' =>'',
+                    '_wp_page_template' =>'template-fullwidth.php'
+                );        
+                foreach ($metas as $key => $value):
+                    add_post_meta($post_id,$key,$value,true);			
+                endforeach;
+                
+   
+            endif;
+        endforeach;
+	}
 	/**
 	 * Redirect the user to the custom login page instead of wp-login.php.
 	 */
