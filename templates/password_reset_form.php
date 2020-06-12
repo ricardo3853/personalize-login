@@ -27,7 +27,7 @@
 		<p class="description"><?php echo wp_get_password_hint(); ?></p>
 
 		<p class="resetpass-submit">
-			<input type="submit" name="submit" id="resetpass-button"
+			<input type="submit" name="submit" id=" btn btn-info resetpass-button"
 			       class="button" value="<?php _e( 'Reset Password', 'personalize-login' ); ?>" />
 		</p>
 	</form>

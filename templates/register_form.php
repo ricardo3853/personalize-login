@@ -50,7 +50,7 @@
 			<?php endif; ?>
 		<p></p>	 
 		<p class="signup-submit">
-			<input type="submit" name="submit" class="register-button"
+			<input type="submit" name="submit" class=" btn btn-success register-button"
 			       value="<?php _e( 'Register', 'personalize-login' ); ?>"/>
 		</p>
  

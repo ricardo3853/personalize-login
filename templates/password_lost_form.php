@@ -27,7 +27,7 @@
 		</p>
 
 		<p class="lostpassword-submit">
-			<input type="submit" name="submit" class="lostpassword-button"
+			<input type="submit" name="submit" class="btn btn-warning lostpassword-button"
 			       value="<?php _e( 'Reset Password', 'personalize-login' ); ?>"/>
 		</p>
 	</form>

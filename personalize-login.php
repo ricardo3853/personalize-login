@@ -76,6 +76,10 @@ class Personalize_Login_Plugin {
 			'member-password-reset' => array(
 				'title' => __( 'Pick a New Password', 'personalize-login' ),
 				'content' => "[login_registro tela='resetPassword']"
+			),			
+			'meu-perfil' => array(
+				'title' => __( 'Meu Perfil', 'personalize-login' ),
+				'content' => "[meu_perfil tela='meuPerfil']"
 			)
 		);
 
@@ -235,7 +239,7 @@ class Personalize_Login_Plugin {
 		if ( ! isset( $user->ID ) ) {
 			return $redirect_url;
 		}
-
+	 
 		if ( user_can( $user, 'manage_options' ) ) {
 			// Use the redirect_to parameter if one is set, otherwise redirect to admin dashboard.
 			if ( $requested_redirect_to == '' ) {
@@ -243,7 +247,14 @@ class Personalize_Login_Plugin {
 			} else {
 				$redirect_url = $redirect_to;
 			}
-		} else {
+		} elseif($user->roles[0]=='guarda_mirim_gmb'){
+			if ( $requested_redirect_to == '' ) {
+				$redirect_url = admin_url();
+			} else {
+				$redirect_url = $redirect_to;
+			}	
+		}
+		else {
 			// Non-admin users always go to their account page after login
 			$redirect_url = home_url( 'member-account' );
 		}
