@@ -12,10 +12,8 @@
 	<?php endif; ?>
 
 	<form id="signupform" action="<?php echo wp_registration_url(); ?>" method="post">
-	 
-		
 			<div class="row linha-tipo-register">
-				<div class="col-md-6">
+				<div class="col-md-6 linha-tipo-register-selected">
 					<input type="radio" name="tipo_role" id='role-jovem-aprendiz' value="jovem_aprendiz" checked>
 					<label for='role-jovem-aprendiz'>SOU UM JOVEM APRENDIZ</label>
 				</div>
